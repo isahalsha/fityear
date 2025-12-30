@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fityear — 1-Year Fitness Program</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Fityear: 1-year fitness transformation with personal dietitian, trainer support, and 14 specialized programs. Join via WhatsApp for ₹4,999." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Fityear — 1-Year Fitness Program" />
+  <meta property="og:description" content="14 specialized programs: Weight loss, PCOD/PCOS, diabetes, thyroid, postpartum, pain relief + more. Personal support via WhatsApp." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fityear.example.com/" />
+  <meta property="og:image" content="https://fityear.example.com/assets/logo.png" />
+ <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K8V83WMB');
+  </script>
+  <link rel="icon" type="image/png" href="assets/favicon-32x32.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* TIGHTER TOP SPACING - Everything moved UP */
+    .site-header { padding-block: 0.5rem; }
+    main { padding-top: 0.25rem; }
+    .hero { margin-top: 0.25rem; row-gap: 1rem; }
+    .hero-text { margin-bottom: 0.6rem; }
+    .btn-large { padding: 0.75rem 1.8rem; }
+    .hero-overlay { top: 12%; right: 6%; }
+    
+    /* FIXED COACH CARD - Perfect styling */
+    .coach-container { width: 400px; height: 620px; }
+    .coach-image { width: 100%; height: 100%; object-fit: cover; }
+   .coach-bio-card {
+  margin-top: 0.8rem;     /* move closer to hair */
+  padding: 0.7rem 0.8rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(2,6,23,0.95), rgba(15,23,42,0.98));
+  border: 1px solid rgba(148,163,184,0.3);
+  color: #e5e7eb;
+  font-size: 0.82rem;
+  box-shadow: 0 20px 50px rgba(15,23,42,0.6);
+  backdrop-filter: blur(12px);
+  margin-left: 1.1rem;     /* small right shift */
+  width: fit-content;
+}
+
+/* Desktop – a bit more right */
+@media (min-width: 3042px) {
+  .coach-bio-card {
+    margin-left: 35rem;
+  }
+}
+
+/* Mobile – right + slightly up */
+@media (max-width: 800px) {
+  .hero-overlay {
+    position: absolute;
+    top: 8%;           /* slightly higher on small screens */
+    right: 50%;
+  }
+
+  .coach-bio-card {
+    margin-top: 0;     /* overlay handles vertical */
+    margin-left: 18rem;  /* center under face */
+    transform: translate(0.3rem, 0.4rem); /* small offset over face */
+    padding: 0.9rem 0.8rem;
+    font-size: 0.78rem;
+  }
+}
+
+    .coach-name {
+      margin: 0 0 0.2rem;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #f8fafc;
+    }
+    .coach-role {
+      margin: 0;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      font-weight: 500;
+    }
+    
+    @media (max-width: 800px) {
+      .coach-container { width: 420px; height: 530px; }
+      .hero-overlay { top: 10%; right: 4%; }
+    }
+    
+    /* PERFECT PROGRAM CARDS - TAP TO REVEAL */
+    /* Premium program cards – always visible text */
+.premium-programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.program-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.16);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(15, 118, 110, 0.25);
+  border-color: rgba(22, 163, 74, 0.55);
+}
+
+.program-image-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 60%; /* 5:3 ratio */
+  overflow: hidden;
+}
+
+.program-image-wrap img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform 0.35s ease;
+}
+
+.program-card:hover .program-image-wrap img {
+  transform: scale(1.07);
+}
+
+.program-body {
+  padding: 1.2rem 1.3rem 1.4rem;
+}
+
+.program-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+  color: #0f172a;
+}
+
+.program-body p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+    
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo-link">
+      <img src="assets/logo.png" alt="Fityear logo" class="logo" loading="lazy" />
+      <span class="brand-name">Fityear</span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <span class="sr-only">Toggle navigation</span>
+        ☰
+      </button>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="index.html#home" class="nav-link active">Home</a></li>
+        <li><a href="programs.html" class="nav-link">Programs</a></li>
+        <li><a href="onboarding.html" class="nav-link">Before Joining</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="home">
+    <!-- Hero Section - FIXED COACH CARD -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+    <h1 id="hero-title">Fityear</h1>
+<p class="hero-subtitle">By Fitso Academy</p>
+
+     
+        <p class="tagline">One year. One plan. Lasting results.</p>
+        <p class="hero-text">
+          Fityear is a 1-year guided fitness and nutrition program delivered fully online with personal support on WhatsApp.
+        </p>
+        <div class="hero-actions">
+          <a href="https://wa.me/918075049374?text=Hello%20Fityear!%20I'd%20like%20to%20join%20the%201-year%20program%20for%20%E2%82%B94,999.%20My%20name%20is%20[Your%20Name]." class="btn btn-primary btn-large">
+            Join via WhatsApp
+          </a>
+          <a href="#programs" class="btn btn-secondary btn-large">View All Programs</a>
+        </div>
+        <p class="price-badge">1 year — ₹4,999 <span class="price-note">(Starts next day)</span></p>
+        <p class="microcopy">We'll reply within 24 hours. Please share your basic health details and recent blood report if available.</p>
+        <a href="assets/Fityear-brochure.pdf" class="btn btn-outline btn-large hero-brochure" download>
+          Download Program Brochure (PDF)
+        </a>
+      </div>
+
+      <div class="hero-visual">
+        <div class="coach-container">
+          <img src="assets/coach.png" alt="Fityear coach Saleel Zacharia (Active IQ Level 3)" class="coach-image" loading="lazy" />
+        </div>
+        <div class="hero-overlay">
+          <div class="hero-card">
+            <div class="hero-pill">
+              <span class="pill-dot"></span>
+              <span class="pill-text">14 Specialized Programs</span>
+            </div>
+          </div>
+          <div class="coach-bio-card">
+            <p class="coach-name">Saleel Zacharia</p>
+            <p class="coach-role">Active IQ Level 3 Personal Trainer</p>
+            <p class="coach-role">Certified Nutrition Professional</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" aria-labelledby="features-title">
+      <h2 id="features-title">Why Fityear works</h2>
+      <div class="features-grid">
+        <article class="feature-card"><h3>Personal dietitian</h3><p>Work with a dedicated dietitian from day one to day 365.</p></article>
+        <article class="feature-card"><h3>Customized diet</h3><p>Receive a tailored diet plan with monthly reviews and updates.</p></article>
+        <article class="feature-card"><h3>Weekly follow-up</h3><p>Stay accountable through weekly WhatsApp check-ins.</p></article>
+        <article class="feature-card"><h3>Trainer support</h3><p>Send questions anytime during working hours and get guidance.</p></article>
+        <article class="feature-card"><h3>Recorded classes</h3><p>Follow clear recorded workouts at home, on your schedule.</p></article>
+        <article class="feature-card"><h3>Monthly tracking</h3><p>Track improvements with reports and personalized adjustments.</p></article>
+      </div>
+    </section>
+
+
+
+    <!-- 14 PERFECT PROGRAM PHOTO CARDS - TAP TO SHOW DETAILS -->
+       <!-- 14 PREMIUM PROGRAM CARDS (always visible) -->
+    <section id="programs" class="programs-professional">
+      <div class="section-header">
+        <h2>14 Specialized Programs</h2>
+        <p>Scroll through all programs with clear photos and titles</p>
+      </div>
+
+      <div class="programs-grid premium-programs-grid">
+        <!-- Weight Loss -->
+        <article class="program-card">
+          <div class="program-image-wrap">
+            <img src="assets/Loss weight .jpg" alt="Weight Loss" loading="lazy">
+          </div>
+          <div class="program-body">
+            <h3>Weight Loss</h3>
+            <p>Sustainable fat loss with personalized dietitian support.</p>
+          </div>
+        </article>
+
+        <!-- Weight Gain -->
+        <article class="program-card">
+          <div class="program-image-wrap">
+            <img src="assets/Gain weight.jpg" alt="Weight Gain" loading="lazy">
+          </div>
+          <div class="program-body">
+            <h3>Weight Gain</h3>
+            <p>Structured muscle gain and healthy weight increase.</p>
+          </div>
+        </article>
+
+        <!-- Postpartum -->
+        <article class="program-card">
+          <div class="program-image-wrap">
+            <img src="assets/Postpartum fat.jpg" alt="Postpartum" loading="lazy">
+          </div>
+          <div class="program-body">
+            <h3>Postpartum Fat Loss</h3>
+            <p>Safe, gradual fat loss after delivery with expert support.</p>
+          </div>
+        </article>
+
+        <!-- PCOD/PCOS -->
+        <article class="program-card">
+          <div class="program-image-wrap">
+            <img src="assets/Pcodpcos.png" alt="PCOD/PCOS" loading="lazy">
+          </div>
+          <div class="program-body">
+            <h3>PCOD / PCOS</h3>
+            <p>Hormone-friendly diet and training for symptom control.</p>
+          </div>
+        </article>
+
+        <!-- Thyroid -->
+        <article class="program-card">
+          <div class="program-image-wrap">
+            <img src="assets/Thyroid .jpg" alt="Thyroid" loading="lazy">
+          </div>
+          <div class="program-body">
+            <h3>Thyroid Support</h3>
+            <p>Metabolism-focused plan for hypo / hyper thyroid issues.</p>
+          </div>
+        </article>
+
+        <!-- Cholesterol -->
+        <article class="program-card">
+          <div class="program-image-wrap">
+            <img src="assets/cholesterol.webp" alt="Cholesterol" loading="lazy">
+          </div>
+          <div class="program-body">
+            <h3>Cholesterol</h3>
+            <p>Heart-healthy nutrition and safe cardio progression.</p>
+          </div>
+        </article>
+
+        <!-- Diabetes -->
+        <article class="program-card">
+          <div class="program-image-wrap">
+            <img src="assets/Diabetes .jpg" alt="Diabetes" loading="lazy">
+          </div>
+          <div class="program-body">
+            <h3>Diabetes Control</h3>
+            <p>Blood sugar management with food, activity, and habits.</p>
+          </div>
+        </article>
+
+        <!-- HIIT Cardio -->
+        <article class="program-card">
+          <div class="program-image-wrap">
+            <img src="assets/HIIT.jpg" alt="HIIT Cardio" loading="lazy">
+          </div>
+          <div class="program-body">
+            <h3>HIIT Cardio</h3>
+            <p>High-intensity workouts for fast calorie burning.</p>
+          </div>
+        </article>
+
+        <!-- Low Intensity -->
+        <article class="program-card">
+          <div class="program-image-wrap">
+            <img src="assets/Low intensity .jpg" alt="Low Intensity" loading="lazy">
+          </div>
+          <div class="program-body">
+            <h3>Low-Intensity Cardio</h3>
+            <p>Joint-friendly walks and simple movement routines.</p>
+          </div>
+        </article>
+
+        <!-- Back Pain -->
+        <article class="program-card">
+          <div class="program-image-wrap">
+            <img src="assets/Back pain.jpg" alt="Back Pain" loading="lazy">
+          </div>
+          <div class="program-body">
+            <h3>Back Pain Relief</h3>
+            <p>Core strengthening and mobility for your spine.</p>
+          </div>
+        </article>
+
+        <!-- Neck Pain -->
+        <article class="program-card">
+          <div class="program-image-wrap">
+            <img src="assets/Neck pain.jpg" alt="Neck Pain" loading="lazy">
+          </div>
+          <div class="program-body">
+            <h3>Neck Pain Relief</h3>
+            <p>Posture correction and gentle releases for neck.</p>
+          </div>
+        </article>
+
+        <!-- Heel Pain -->
+        <article class="program-card">
+          <div class="program-image-wrap">
+            <img src="assets/Heel pain.jpg" alt="Heel Pain" loading="lazy">
+          </div>
+          <div class="program-body">
+            <h3>Heel Pain Relief</h3>
+            <p>Foot-strengthening and impact-reduction strategy.</p>
+          </div>
+        </article>
+
+        <!-- Posture -->
+        <article class="program-card">
+          <div class="program-image-wrap">
+            <img src="assets/Posture correcting.jpg" alt="Posture Correction" loading="lazy">
+          </div>
+          <div class="program-body">
+            <h3>Posture Correction</h3>
+            <p>Alignment work to sit, stand, and move better.</p>
+          </div>
+        </article>
+
+        <!-- Home Workout -->
+        <article class="program-card">
+          <div class="program-image-wrap">
+            <img src="assets/Home workout.jpg" alt="Home Workout" loading="lazy">
+          </div>
+          <div class="program-body">
+            <h3>Home Workout</h3>
+            <p>Minimal equipment sessions you can do anywhere.</p>
+          </div>
+        </article>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="https://wa.me/918075049374?text=Hello%20Fityear!%20I'm%20interested%20in%20the%20[PROGRAM]%20program." class="btn btn-primary btn-large">
+          Start Your Transformation
+        </a>
+        <p style="color: var(--color-muted); margin-top: 1rem; font-size: 0.95rem;">
+          Every program includes personal dietitian + trainer for 1 year • ₹4,999
+        </p>
+      </div>
+    </section>
+
+   
+  
+  
+  <!-- How it works (4 steps) -->
+  <section class="how-it-works" aria-labelledby="how-title">
+      <h2 id="how-title">How it works</h2>
+      <ol class="steps-list">
+        <li><div class="step-number">1</div><div class="step-content"><h3>Book live consultation</h3><p>Choose a time and book your one-to-one session easily.</p></div></li>
+        <li><div class="step-number">2</div><div class="step-content"><h3>Live Consultation with Dietitian</h3><p>Talk with an expert dietitian about your goals and lifestyle.</p></div></li>
+        <li><div class="step-number">3</div><div class="step-content"><h3>Get your plan</h3><p>Receive a personalized diet and fitness plan made just for you.</p></div></li>
+        <li><div class="step-number">4</div><div class="step-content"><h3>Follow, Track & Improve</h3><p>Follow the plan, track progress, and improve with regular support.</p></div></li>
+      </ol>
+    </section>
+</main>
+  <!-- PREMIUM Footer -->
+  <footer class="site-footer premium-footer">
+    <div class="footer-container">
+      <div class="footer-main">
+        <div class="footer-brand-section">
+          <img src="assets/logo.png" alt="Fityear logo" class="footer-logo-premium" loading="lazy" />
+          <p class="footer-tagline-premium">One year. One plan. Lasting results.</p>
+          <div class="footer-price-badge">
+            <span class="price-main">₹4,999</span>
+            <span class="price-duration">1-year program</span>
+          </div>
+        </div>
+        <div class="footer-links-grid">
+          <div class="footer-column">
+            <h4>Programs</h4>
+            <ul>
+              <li><a href="programs.html#weight">Weight Management</a></li>
+              <li><a href="programs.html#women">Women's Health</a></li>
+              <li><a href="programs.html#medical">Medical Conditions</a></li>
+              <li><a href="programs.html#pain">Pain Relief</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="onboarding.html">Before Joining</a></li>
+              <li><a href="contact.html#faqs">FAQs</a></li>
+              <li><a href="contact.html#terms">Terms</a></li>
+              <li><a href="contact.html#privacy">Privacy</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="contact.html#contact-options">Contact Us</a></li>
+              <li><a href="https://wa.me/918075049374">WhatsApp (24h)</a></li>
+              <li><a href="mailto:hello@fityear.com">fityear.in@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-trust">
+          <div class="trust-item-small"><span class="trust-number">24h</span><span>Response</span></div>
+          <div class="trust-item-small"><span class="trust-number">1000+</span><span>Members</span></div>
+          <div class="trust-item-small"><span class="trust-number">Certified</span><span>Coaches</span></div>
+        </div>
+        <div class="footer-divider"></div>
+        <p class="footer-copy-premium">
+          &copy; <span id="year"></span> Fityear. All rights reserved. | 
+          <a href="contact.html#privacy">Privacy Policy</a> | 
+          <a href="contact.html#terms">Terms of Service</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/918075049374?text=Hello%20Fityear!%20I'd%20like%20to%20join%20the%20[PROGRAM]%20for%20%E2%82%B94,999.%20My%20name%20is%20[Your%20Name]." class="floating-whatsapp" aria-label="Chat on WhatsApp">
+    <img src="assets/whatsapp.png" alt="" loading="lazy" />
+  </a>
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K8V83WMB"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <script src="script.js"></script>
+  
+</body>
+</html>

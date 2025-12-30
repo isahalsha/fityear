@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Programs — Fityear</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Choose from 14 specialized 1-year fitness programs including weight loss, PCOD/PCOS, diabetes control, pain relief, and more. Personal support via WhatsApp." />
+
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo-link">
+      <img src="assets/logo.png" alt="Fityear logo" class="logo" loading="lazy" />
+      <span class="brand-name">Fityear</span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <span class="sr-only">Toggle navigation</span>
+        ☰
+      </button>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="index.html#home" class="nav-link">Home</a></li>
+        <li><a href="programs.html" class="nav-link active">Programs</a></li>
+        <li><a href="onboarding.html" class="nav-link">Before Joining</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <section class="page-header" aria-labelledby="programs-page-title">
+      <h1 id="programs-page-title">Programs</h1>
+      <p class="page-subtitle">
+        Choose the program that matches your goal. All programs include the same 1-year Fityear journey with personal dietitian, trainer support, and weekly follow-ups.
+      </p>
+      <div class="price-reminder">
+        <span>1 year — ₹4,999</span>
+        <span class="price-note">(Starts next day after onboarding)</span>
+      </div>
+    </section>
+
+    <section class="programs-grid" aria-label="Program list">
+      <!-- Program Template -->
+      <article class="program-card" data-program="Home workout">
+        <div class="program-compact">
+          <h2 class="program-title">Home workout</h2>
+          <p class="program-short">Simple, structured home workouts using minimal equipment.</p>
+          <button class="program-toggle" aria-expanded="false" aria-controls="details-home-workout">View details</button>
+        </div>
+        <div class="program-details" id="details-home-workout" hidden>
+          <div class="program-specs">
+            <div class="spec-item"><span class="spec-label">Session length</span><span class="spec-value">1– hour</span></div>
+            <div class="spec-item"><span class="spec-label">Equipment</span><span class="spec-value">Yoga mat, light dumbbells,shoes</span></div>
+            <div class="spec-item"><span class="spec-label">Best for</span><span class="spec-value">Beginners & busy professionals</span></div>
+          </div>
+          <figure class="video-thumb">
+            <img src="assets/Home workout.jpg" alt="Person doing home workout exercises" loading="lazy" />
+           
+          </figure>
+          <a href="#" class="btn btn-primary join-program" data-program="Home workout">Join via WhatsApp</a>
+          <p class="microcopy">We'll reply within 24 hours. Share your fitness level and any injuries.</p>
+        </div>
+      </article>
+
+      <article class="program-card" data-program="Weight loss program">
+        <div class="program-compact">
+          <h2 class="program-title">Weight loss program</h2>
+          <p class="program-short">Gradual, sustainable fat loss with tailored diet & cardio.</p>
+          <button class="program-toggle" aria-expanded="false" aria-controls="details-weight-loss">View details</button>
+        </div>
+        <div class="program-details" id="details-weight-loss" hidden>
+          <div class="program-specs">
+            <div class="spec-item"><span class="spec-label">Session length</span><span class="spec-value">1– hour</span></div>
+            <div class="spec-item"><span class="spec-label">Equipment</span><span class="spec-value">Yoga mat, light dumbbells,shoes</span></div>
+            <div class="spec-item"><span class="spec-label">Best for</span><span class="spec-value">Safe & steady weight loss</span></div>
+          </div>
+          <figure class="video-thumb">
+            <img src="assets/Loss weight .jpg" alt="Person doing weight loss cardio workout" loading="lazy" />
+           
+          </figure>
+          <a href="#" class="btn btn-primary join-program" data-program="Weight loss program">Join via WhatsApp</a>
+          <p class="microcopy">Share current weight, goal weight, and recent blood reports.</p>
+        </div>
+      </article>
+
+      <article class="program-card" data-program="Weight gain program">
+        <div class="program-compact">
+          <h2 class="program-title">Weight gain program</h2>
+          <p class="program-short">Muscle building with structured strength & nutrition.</p>
+          <button class="program-toggle" aria-expanded="false" aria-controls="details-weight-gain">View details</button>
+        </div>
+        <div class="program-details" id="details-weight-gain" hidden>
+          <div class="program-specs">
+            <div class="spec-item"><span class="spec-label">Session length</span><span class="spec-value">1– hour</span></div>
+            <div class="spec-item"><span class="spec-label">Equipment</span><span class="spec-value">Yoga mat, light dumbbells,shoes</span></div>
+            <div class="spec-item"><span class="spec-label">Best for</span><span class="spec-value">Lean mass gain</span></div>
+          </div>
+          <figure class="video-thumb">
+            <img src="assets/Gain weight.jpg" alt="Strength training for muscle gain" loading="lazy"/>
+           
+          </figure>
+          <a href="#" class="btn btn-primary join-program" data-program="Weight gain program">Join via WhatsApp</a>
+          <p class="microcopy">Share current weight, appetite, and lifestyle details.</p>
+        </div>
+      </article>
+
+      <article class="program-card" data-program="Postpartum fat reducing program">
+        <div class="program-compact">
+          <h2 class="program-title">Postpartum fat reducing program</h2>
+          <p class="program-short">Safe core rebuilding for new mothers (doctor cleared).</p>
+          <button class="program-toggle" aria-expanded="false" aria-controls="details-postpartum">View details</button>
+        </div>
+        <div class="program-details" id="details-postpartum" hidden>
+          <div class="program-specs">
+            <div class="spec-item"><span class="spec-label">Session length</span><span class="spec-value">1– hour</span></div>
+            <div class="spec-item"><span class="spec-label">Equipment</span><span class="spec-value">Yoga mat, light dumbbells,shoes</span></div>
+            <div class="spec-item"><span class="spec-label">Best for</span><span class="spec-value">Postpartum mothers</span></div>
+          </div>
+          <figure class="video-thumb">
+            <img src="assets/Postpartum fat.jpg" alt="Postpartum safe exercises" loading="lazy"/>
+            
+          </figure>
+          <a href="#" class="btn btn-primary join-program" data-program="Postpartum fat reducing program">Join via WhatsApp</a>
+          <p class="microcopy">Share delivery date and doctor's clearance status.</p>
+        </div>
+      </article>
+
+      <article class="program-card" data-program="PCOD / PCOS reducing program">
+        <div class="program-compact">
+          <h2 class="program-title">PCOD / PCOS reducing program</h2>
+          <p class="program-short">Hormone-friendly workouts and diet adjustments.</p>
+          <button class="program-toggle" aria-expanded="false" aria-controls="details-pcos">View details</button>
+        </div>
+        <div class="program-details" id="details-pcos" hidden>
+          <div class="program-specs">
+            <div class="spec-item"><span class="spec-label">Session length</span><span class="spec-value">1– hour</span></div>
+            <div class="spec-item"><span class="spec-label">Equipment</span><span class="spec-value">Yoga mat, light dumbbells,shoes</span></div>
+            <div class="spec-item"><span class="spec-label">Best for</span><span class="spec-value">PCOD/PCOS management</span></div>
+          </div>
+          <figure class="video-thumb">
+            <img src="assets/Pcodpcos.png" alt="Gentle workout for hormonal health" loading="lazy"/>
+          
+          </figure>
+          <a href="#" class="btn btn-primary join-program" data-program="PCOD / PCOS reducing program">Join via WhatsApp</a>
+          <p class="microcopy">Share diagnosis details and current medications.</p>
+        </div>
+      </article>
+
+      <article class="program-card" data-program="Thyroid support program">
+        <div class="program-compact">
+          <h2 class="program-title">Thyroid support program</h2>
+          <p class="program-short">Metabolism-focused training and nutrition adjustments.</p>
+          <button class="program-toggle" aria-expanded="false" aria-controls="details-thyroid">View details</button>
+        </div>
+        <div class="program-details" id="details-thyroid" hidden>
+          <div class="program-specs">
+            <div class="spec-item"><span class="spec-label">Session length</span><span class="spec-value">1– hour</span></div>
+            <div class="spec-item"><span class="spec-label">Equipment</span><span class="spec-value">Yoga mat, light dumbbells,shoes</span></div>
+            <div class="spec-item"><span class="spec-label">Best for</span><span class="spec-value">Thyroid conditions</span></div>
+          </div>
+          <figure class="video-thumb">
+            <img src="assets/Thyroid .jpg" alt="Gentle thyroid-friendly exercises" loading="lazy" />
+          
+          </figure>
+          <a href="#" class="btn btn-primary join-program" data-program="Thyroid support program">Join via WhatsApp</a>
+          <p class="microcopy">Share latest TSH values and medications.</p>
+        </div>
+      </article>
+
+      <article class="program-card" data-program="Cholesterol control program">
+        <div class="program-compact">
+          <h2 class="program-title">Cholesterol control program</h2>
+          <p class="program-short">Cardio and diet focus to improve cholesterol markers.</p>
+          <button class="program-toggle" aria-expanded="false" aria-controls="details-cholesterol">View details</button>
+        </div>
+        <div class="program-details" id="details-cholesterol" hidden>
+          <div class="program-specs">
+            <div class="spec-item"><span class="spec-label">Session length</span><span class="spec-value">1– hour</span></div>
+            <div class="spec-item"><span class="spec-label">Equipment</span><span class="spec-value">Yoga mat, light dumbbells,shoes</span></div>
+            <div class="spec-item"><span class="spec-label">Best for</span><span class="spec-value">High cholesterol management</span></div>
+          </div>
+          <figure class="video-thumb">
+            <img src="assets/cholesterol.webp" alt="Cholesterol control cardio" loading="lazy" />
+          
+          </figure>
+          <a href="#" class="btn btn-primary join-program" data-program="Cholesterol control program">Join via WhatsApp</a>
+          <p class="microcopy">Share lipid profile and medical advice details.</p>
+        </div>
+      </article>
+
+      <article class="program-card" data-program="Diabetes control program">
+        <div class="program-compact">
+          <h2 class="program-title">Diabetes control program</h2>
+          <p class="program-short">Activity and diet for blood sugar management.</p>
+          <button class="program-toggle" aria-expanded="false" aria-controls="details-diabetes">View details</button>
+        </div>
+        <div class="program-details" id="details-diabetes" hidden>
+          <div class="program-specs">
+            <div class="spec-item"><span class="spec-label">Session length</span><span class="spec-value">1– hour</span></div>
+            <div class="spec-item"><span class="spec-label">Equipment</span><span class="spec-value">Yoga mat, light dumbbells,shoes</span></div>
+            <div class="spec-item"><span class="spec-label">Best for</span><span class="spec-value">Type 2 diabetes management</span></div>
+          </div>
+          <figure class="video-thumb">
+            <img src="assets/Diabetes .jpg" alt="Diabetes friendly cardio session" loading="lazy" />
+            
+          </figure>
+          <a href="#" class="btn btn-primary join-program" data-program="Diabetes control program">Join via WhatsApp</a>
+          <p class="microcopy">Share HbA1c values and medications.</p>
+        </div>
+      </article>
+
+      <article class="program-card" data-program="HIIT cardio program">
+        <div class="program-compact">
+          <h2 class="program-title">HIIT cardio program</h2>
+          <p class="program-short">High-intensity interval training for fat loss and fitness.</p>
+          <button class="program-toggle" aria-expanded="false" aria-controls="details-hiit">View details</button>
+        </div>
+        <div class="program-details" id="details-hiit" hidden>
+          <div class="program-specs">
+            <div class="spec-item"><span class="spec-label">Session length</span><span class="spec-value">1– hour</span></div>
+            <div class="spec-item"><span class="spec-label">Equipment</span><span class="spec-value">Yoga mat, light dumbbells,shoes</span></div>
+            <div class="spec-item"><span class="spec-label">Best for</span><span class="spec-value">Intermediate to advanced</span></div>
+          </div>
+          <figure class="video-thumb">
+            <img src="assets/HIIT.jpg" alt="HIIT cardio workout" loading="lazy" />
+            
+          </figure>
+          <a href="#" class="btn btn-primary join-program" data-program="HIIT cardio program">Join via WhatsApp</a>
+          <p class="microcopy">Please share any heart/joint issues before starting.</p>
+        </div>
+      </article>
+
+      <article class="program-card" data-program="Low intensity cardio program">
+        <div class="program-compact">
+          <h2 class="program-title">Low intensity cardio program</h2>
+          <p class="program-short">Gentle sustained movement for beginners and seniors.</p>
+          <button class="program-toggle" aria-expanded="false" aria-controls="details-low-intensity">View details</button>
+        </div>
+        <div class="program-details" id="details-low-intensity" hidden>
+          <div class="program-specs">
+            <div class="spec-item"><span class="spec-label">Session length</span><span class="spec-value">1– hour</span></div>
+            <div class="spec-item"><span class="spec-label">Equipment</span><span class="spec-value">Yoga mat, light dumbbells,shoes</span></div>
+            <div class="spec-item"><span class="spec-label">Best for</span><span class="spec-value">Beginners, seniors</span></div>
+          </div>
+          <figure class="video-thumb">
+            <img src="assets/Low intensity .jpg" alt="Low intensity cardio routine" loading="lazy" />
+            
+          </figure>
+          <a href="#" class="btn btn-primary join-program" data-program="Low intensity cardio program">Join via WhatsApp</a>
+          <p class="microcopy">Share your activity level and joint health.</p>
+        </div>
+      </article>
+
+      <article class="program-card" data-program="Back pain program">
+        <div class="program-compact">
+          <h2 class="program-title">Back pain program</h2>
+          <p class="program-short">Mobility and strengthening sessions focusing on back care.</p>
+          <button class="program-toggle" aria-expanded="false" aria-controls="details-back-pain">View details</button>
+        </div>
+        <div class="program-details" id="details-back-pain" hidden>
+          <div class="program-specs">
+            <div class="spec-item"><span class="spec-label">Session length</span><span class="spec-value">1– hour</span></div>
+            <div class="spec-item"><span class="spec-label">Equipment</span><span class="spec-value">Mat, pillow</span></div>
+            <div class="spec-item"><span class="spec-label">Best for</span><span class="spec-value">Chronic back discomfort</span></div>
+          </div>
+          <figure class="video-thumb">
+            <img src="assets/Back pain.jpg" alt="Back pain relief routine" loading="lazy" />
+          
+          </figure>
+          <a href="#" class="btn btn-primary join-program" data-program="Back pain program">Join via WhatsApp</a>
+          <p class="microcopy">Share doctor advice and any red-flag symptoms.</p>
+        </div>
+      </article>
+
+      <article class="program-card" data-program="Neck pain program">
+        <div class="program-compact">
+          <h2 class="program-title">Neck pain program</h2>
+          <p class="program-short">Gentle stretches and posture work for neck & shoulder relief.</p>
+          <button class="program-toggle" aria-expanded="false" aria-controls="details-neck-pain">View details</button>
+        </div>
+        <div class="program-details" id="details-neck-pain" hidden>
+          <div class="program-specs">
+            <div class="spec-item"><span class="spec-label">Session length</span><span class="spec-value">1– hour</span></div>
+            <div class="spec-item"><span class="spec-label">Equipment</span><span class="spec-value">Chair, mat</span></div>
+            <div class="spec-item"><span class="spec-label">Best for</span><span class="spec-value">Desk workers, mild stiffness</span></div>
+          </div>
+          <figure class="video-thumb">
+            <img src="assets/Neck pain.jpg" alt="Neck pain relief stretches" loading="lazy" />
+           
+          </figure>
+          <a href="#" class="btn btn-primary join-program" data-program="Neck pain program">Join via WhatsApp</a>
+          <p class="microcopy">Share injuries or scans before starting.</p>
+        </div>
+      </article>
+
+      <article class="program-card" data-program="Heel pain program">
+        <div class="program-compact">
+          <h2 class="program-title">Heel pain program</h2>
+          <p class="program-short">Foot and calf exercises easing heel discomfort.</p>
+          <button class="program-toggle" aria-expanded="false" aria-controls="details-heel-pain">View details</button>
+        </div>
+        <div class="program-details" id="details-heel-pain" hidden>
+          <div class="program-specs">
+            <div class="spec-item"><span class="spec-label">Session length</span><span class="spec-value">1– hour</span></div>
+            <div class="spec-item"><span class="spec-label">Equipment</span><span class="spec-value">Tennis ball, towel</span></div>
+            <div class="spec-item"><span class="spec-label">Best for</span><span class="spec-value">Plantar fasciitis, soreness</span></div>
+          </div>
+          <figure class="video-thumb">
+            <img src="assets/Heel pain.jpg" alt="Heel pain relief exercises" loading="lazy" />
+            
+          </figure>
+          <a href="#" class="btn btn-primary join-program" data-program="Heel pain program">Join via WhatsApp</a>
+          <p class="microcopy">Share duration and pain triggers.</p>
+        </div>
+      </article>
+
+      <article class="program-card" data-program="Posture correcting workout">
+        <div class="program-compact">
+          <h2 class="program-title">Posture correcting workout</h2>
+          <p class="program-short">Improve posture, alignment, and daily movement.</p>
+          <button class="program-toggle" aria-expanded="false" aria-controls="details-posture">View details</button>
+        </div>
+        <div class="program-details" id="details-posture" hidden>
+          <div class="program-specs">
+            <div class="spec-item"><span class="spec-label">Session length</span><span class="spec-value">1– hour</span></div>
+            <div class="spec-item"><span class="spec-label">Equipment</span><span class="spec-value">Wall, mat, resistance band</span></div>
+            <div class="spec-item"><span class="spec-label">Best for</span><span class="spec-value">Desk workers, slouching</span></div>
+          </div>
+          <figure class="video-thumb">
+            <img src="assets/Posture correcting.jpg" alt="Posture correction exercises" loading="lazy" />
+          
+          </figure>
+          <a href="#" class="btn btn-primary join-program" data-program="Posture correcting workout">Join via WhatsApp</a>
+          <p class="microcopy">Share work lifestyle & pain points.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+   <footer class="site-footer premium-footer">
+    <div class="footer-container">
+      <div class="footer-main">
+        <div class="footer-brand-section">
+          <img src="assets/logo.png" alt="Fityear logo" class="footer-logo-premium" loading="lazy" />
+          <p class="footer-tagline-premium">One year. One plan. Lasting results.</p>
+          <div class="footer-price-badge">
+            <span class="price-main">₹4,999</span>
+            <span class="price-duration">1-year program</span>
+          </div>
+        </div>
+        <div class="footer-links-grid">
+          <div class="footer-column">
+            <h4>Programs</h4>
+            <ul>
+              <li><a href="programs.html#weight">Weight Management</a></li>
+              <li><a href="programs.html#women">Women's Health</a></li>
+              <li><a href="programs.html#medical">Medical Conditions</a></li>
+              <li><a href="programs.html#pain">Pain Relief</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="onboarding.html">Before Joining</a></li>
+              <li><a href="contact.html#faqs">FAQs</a></li>
+              <li><a href="contact.html#terms">Terms</a></li>
+              <li><a href="contact.html#privacy">Privacy</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="contact.html#contact-options">Contact Us</a></li>
+              <li><a href="https://wa.me/918075049374">WhatsApp (24h)</a></li>
+              <li><a href="mailto:hello@fityear.com">fityear.in@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-trust">
+          <div class="trust-item-small"><span class="trust-number">24h</span><span>Response</span></div>
+          <div class="trust-item-small"><span class="trust-number">1000+</span><span>Members</span></div>
+          <div class="trust-item-small"><span class="trust-number">Certified</span><span>Coaches</span></div>
+        </div>
+        <div class="footer-divider"></div>
+        <p class="footer-copy-premium">
+          &copy; <span id="year"></span> Fityear. All rights reserved. | 
+          <a href="contact.html#privacy">Privacy Policy</a> | 
+          <a href="contact.html#terms">Terms of Service</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <a
+    href="https://wa.me/918075049374?text=Hello%20Fityear!%20I'd%20like%20to%20join%20the%201-year%20program%20for%20%E2%82%B94,999.%20Please%20enrol%20me%20into%20the%20%5BProgram%20Name%5D%20program.%20My%20name%20is%20%5BYour%20Name%5D."
+    class="floating-whatsapp"
+    aria-label="Chat on WhatsApp to join Fityear"
+  >
+    <img src="assets/whatsapp.png" alt="" loading="lazy" />
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
