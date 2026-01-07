@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!cards.length) return;
 
   var baseUrl =
-    "https://wa.me/919876543210?text=Hello%20Fityear!%20I%27d%20like%20to%20join%20the%201-year%20program%20for%20%E2%82%B94,999.";
+    "https://wa.me/919876543210?text=Hello%20Fityear!%20I%27d%20like%20to%20join%20the%201-year%20program%20for%20%E2%82%B98,999.";
 
   cards.forEach(function (card) {
     var programName = card.getAttribute("data-program") || "Fityear program";
